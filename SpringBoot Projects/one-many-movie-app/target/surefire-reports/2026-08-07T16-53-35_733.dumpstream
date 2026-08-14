@@ -1,0 +1,5 @@
+# Created at 2026-08-07T16:53:37.696
+Boot Manifest-JAR contains absolute paths in classpath 'D:\capegemini\2026\AI\SpringBoot Projects\one-many-movie-app\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

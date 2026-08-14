@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ctx="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+    
+    <bean id="accRep" class="com.cg.AccountRepositoryImpl">
+    </bean>
+<!--
+    <bean id="accountService" class="com.cg.AccountServiceImpl"   autowire="byType"  >
+    -->
+    <bean id="accountService" class="com.cg.AccountServiceImpl">
+    <!-- Calling setter method and pass accountRepository ref   -->
+    <!-- Bean wiring connecting the beans together -->
+    <!--
+        <property name="accountRepository" ref="accountRepository"/>
+        -->
+    </bean>
+    <!-- Enable annotation-based configuration -->
+    <ctx:annotation-config/>
+    </beans>
