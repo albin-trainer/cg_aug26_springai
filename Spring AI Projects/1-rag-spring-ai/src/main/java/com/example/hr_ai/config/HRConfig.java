@@ -40,19 +40,21 @@ public class HRConfig {
                     .put("filename", "hrpolicy.txt");
             List<Document> documents = textReader.get();
 
-           TextSplitter textSplitter = new TokenTextSplitter();
-           /* TextSplitter textSplitter = new TokenTextSplitter(
+         //  TextSplitter textSplitter = new TokenTextSplitter();
+            TextSplitter textSplitter = new TokenTextSplitter(
                     50,      // chunk size (tokens)
                     20,      // minimum chunk size in characters
                     5,       // minimum chunk length to embed
                     1000,    // maximum number of chunks
                     true,    // keep separators
                     List.of('.', '?', '!', ';', ':', '\n')
-            );*/
+            );
             
+            //split into many chunks..
             List<Document> splitDocuments = textSplitter.apply(documents);
-
+            //added in the vector store
             vectorStore.add(splitDocuments);
+            //saved as JSON file
             vectorStore.save(vectorStoreFile);
         }
         return vectorStore;
