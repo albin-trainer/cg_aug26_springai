@@ -1,0 +1,27 @@
+spring.application.name=1-rag-hr-ai
+spring.ai.openai.api-key= {YOUR KEY}
+
+# ===============================
+# PostgreSQL
+# ===============================
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/hrdb
+spring.datasource.username=postgres
+spring.datasource.password=root
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+
+# ===============================
+# PGVector
+# ===============================
+
+spring.ai.vectorstore.pgvector.initialize-schema=true
+
+
+# ===============================
+# OpenAI
+# ===============================
+
+
+# Embedding model
+spring.ai.openai.embedding.options.model=text-embedding-3-small
